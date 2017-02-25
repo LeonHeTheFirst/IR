@@ -1,0 +1,8 @@
+*.bin
+*.pkl
+*.gpg
+**/analysis*.txt
+**/postings*.txt
+**/fire10*.txt
+
+
