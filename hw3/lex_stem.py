@@ -55,17 +55,17 @@ for line in readfile:
 		for word in line_words:
 			# filter out stopwords, additional filter for one and two letter words
 			if word not in stopwords and len(word) > 2:
-				if word in lexicon:
-					lexicon[word][1] += 1 # increment word count in dictionary
+				if word[:5] in lexicon:
+					lexicon[word[:5]][1] += 1 # increment word[:5] count in dictionary
 				else:
-					lexicon[word] = [0,1, inv_index, 0] # add to dictionary
+					lexicon[word[:5]] = [0,1, inv_index, 0] # add to dictionary
 					inv_index += 1
-				if word in temp_dict:
-					temp_dict[word] += 1
-				elif word not in temp_dict:
-					temp_dict[word] = 1
-					if word in lexicon:
-						lexicon[word][0] += 1 # increment doc count
+				if word[:5] in temp_dict:
+					temp_dict[word[:5]] += 1
+				elif word[:5] not in temp_dict:
+					temp_dict[word[:5]] = 1
+					if word[:5] in lexicon:
+						lexicon[word[:5]][0] += 1 # increment doc count
 inv_file = [x for x in inv_file if x != []]
 bytecount = 0;
 alpha_lex = collections.OrderedDict(sorted(lexicon.items()))
@@ -80,7 +80,7 @@ writefile.write('Vocabulary size:' + str(len(lexicon)) + '\n')
 writefile.write('Total number of words:' + str(collection_size) + '\n')
 
 # write inverted list to binary file
-with open('inv_' + fname[:-4] + '.bin', 'wb') as invertedfile:
+with open('inv_' + fname[:-4] + '_stem.bin', 'wb') as invertedfile:
 	for word in alpha_lex:
 		postings_list = inv_file[alpha_lex[word][2]]
 		alpha_lex[word][2] = bytecount
@@ -119,16 +119,16 @@ for line in readfile:
 		for word in line_words:
 			# filter out stopwords, additional filter for one and two letter words
 			if word not in stopwords and len(word) > 2:
-				if word not in temp_dict:
-					temp_dict[word] = 1
+				if word[:5] not in temp_dict:
+					temp_dict[word[:5]] = 1
 				else:
-					temp_dict[word] += 1
+					temp_dict[word[:5]] += 1
 				# print(word, alpha_lex[word][3])
 				# len_accum += alpha_lex[word][3] * alpha_lex[word][3] * * 
 				
 # write lexicon to pickled file
-pickle.dump(alpha_lex, open(fname[:-4] + '.pkl', 'wb'))
-pickle.dump(doc_lens, open(fname[:-4] + '_lengths.pkl', 'wb'))
+pickle.dump(alpha_lex, open(fname[:-4] + '_stem.pkl', 'wb'))
+pickle.dump(doc_lens, open(fname[:-4] + '_lengths_stem.pkl', 'wb'))
 with open(fname[:-4] + 'size.txt', 'w') as sizefile:
 	sizefile.write(str(total_docs))
 

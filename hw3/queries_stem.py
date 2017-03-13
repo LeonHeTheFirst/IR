@@ -11,6 +11,19 @@ def get_docs(lexicon, inv_file, words):
 	docs.sort()
 	return docs
 
+# function for retrieving postings list as a string
+def get_postings_str(lexicon, inv_file, word):
+	if word.lower() in lexicon:
+		retval = ''
+		# iterate through the values two at a time
+		it = zip(*[iter(inv_file[lexicon[word][2]:lexicon[word][2]
+			 + 2*lexicon[word][0]])]*2)
+		for doc, count in it:
+			retval += ' doc' + str(doc) + ': ' + str(count) + ','
+		return retval[:-1] # remove last comma
+	else:
+		return 'not in lexicon'
+
 # function for retrieving postings list
 def get_postings_list(lexicon, inv_file, word):
 	if word.lower() in lexicon:
@@ -36,6 +49,7 @@ def get_tdidf(lexicon, word):
 	if word.lower() in lexicon:
 		return lexicon[word][3]
 	else:
+		print('tdidf not found', word)
 		return -1
 
 def build_search_matrix(lexicon, inv_file, words):
@@ -127,9 +141,9 @@ for line in readfile:
 			# filter out stopwords, additional filter for one and two letter words
 			if word not in stopwords and len(word) > 2:
 				if word in term_pairs:
-					term_pairs[word] += get_tdidf(new_alphalex, word) # increment word count in dictionary
+					term_pairs[word[:5]] += get_tdidf(new_alphalex, word[:5]) # increment word[:5] count in dictionary
 				else:
-					term_pairs[word] = get_tdidf(new_alphalex, word) # add to dictionary
+					term_pairs[word[:5]] = get_tdidf(new_alphalex, word[:5]) # add to dictionary
 
 
 # read in the inverted file
@@ -141,8 +155,8 @@ with open(inv_file, 'rb') as invertedfile:
 			break
 		inv_list.append(int.from_bytes(intbytes, byteorder='big', signed=False))
 
-# load in file containing all the document lengths
-doc_lens = pickle.load(open(pkl_file[:-4] + '_lengths.pkl', 'rb'))
+doc_lens = pickle.load(open(pkl_file[:-8] + 'lengths_stem.pkl', 'rb'))
+print('doc_lens', doc_lens)
 
 # for each query, construct a matrix with terms in query as one axis
 # and all documents containing query words as the other
@@ -152,23 +166,18 @@ doc_matrices = []
 rankings = {}
 for query_num, query_vector in qs.items():
 	print('loop', query_num)
-	if query_num == 76:
-		print(query_num, query_vector)
-	# the matrix will have all the document vectors for a query
 	matrix = build_search_matrix(new_alphalex, inv_list, query_vector.keys())
-	cosines = {} # dictionary to store cosine values for each document
-	# calculate cosines for each document
+	cosines = {}
 	for doc_num, doc_vector in matrix.items():
 		doc_length = doc_lens[doc_num]
 		cosines[doc_num] = cosine(doc_length, doc_vector, query_vector)
-	# sort the documents by cosine similarity
 	sorted_cosines = sorted(cosines.items(), key=operator.itemgetter(1))
 	sorted_cosines.reverse()
 	rankings[query_num] = sorted_cosines
+	doc_matrices.append(matrix) #list of matrices
+	query_vectors.append((query_num, query_vector)) #converting to a list
 
-# write the results out to a file
-# filename will be changed manually
-with open(query_file[:-4] + '_results-a.txt', 'w') as w1:
+with open(query_file[:-4] + '_results-stem.txt', 'w') as w1:
 	for q_num, rank in rankings.items():
 		for index, entry in enumerate(rank):
 			if index < 50:
