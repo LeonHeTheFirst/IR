@@ -141,9 +141,11 @@ for line in readfile:
 			# filter out stopwords, additional filter for one and two letter words
 			if word not in stopwords and len(word) > 2:
 				if word in term_pairs:
-					term_pairs[word[:5]] += get_tdidf(new_alphalex, word[:5]) # increment word[:5] count in dictionary
+					# increment word[:5] count in dictionary
+					term_pairs[word[:5]] += get_tdidf(new_alphalex, word[:5])
 				else:
-					term_pairs[word[:5]] = get_tdidf(new_alphalex, word[:5]) # add to dictionary
+					# add to dictionary
+					term_pairs[word[:5]] = get_tdidf(new_alphalex, word[:5])
 
 
 # read in the inverted file
@@ -181,4 +183,5 @@ with open(query_file[:-4] + '_results-stem.txt', 'w') as w1:
 	for q_num, rank in rankings.items():
 		for index, entry in enumerate(rank):
 			if index < 50:
-				w1.write(str(q_num) + ' Q0 ' + str(entry[0]) + ' ' + str(index + 1) + ' ' + str(entry[1]) + ' he\n')
+				w1.write(str(q_num) + ' Q0 ' + str(entry[0]) +
+					' ' + str(index + 1) + ' ' + str(entry[1]) + ' he\n')
