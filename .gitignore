@@ -17,3 +17,4 @@ hw3/he-b.txt
 hw4/phase1.dev.shuf.tsv
 hw4/phase1.test.shuf.tsv
 hw4/phase1.train.shuf.tsv
+hw5/*.tsv
