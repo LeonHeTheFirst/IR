@@ -1,10 +1,6 @@
 import os, random
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.svm import LinearSVC
 from sklearn.linear_model import SGDClassifier
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
 
 # reference: http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html
@@ -85,8 +81,6 @@ zipped = list(zip(labels, data))
 random.shuffle(zipped)
 labels, data = zip(*zipped)
 
-# print(list(zip(labels, data)))
-
 # read in the test data
 test_labels_en, test_data_en = read_book_testing('en')
 test_labels_fr, test_data_fr = read_book_testing('fr')
@@ -104,7 +98,6 @@ pipe_svm = Pipeline([
 
 pipe_svm.fit(data, labels)
 answers_svm = pipe_svm.predict(test_data)
-
 
 # find the total number of docs returned and number of relevant docs returned
 matched_svm_en = 0

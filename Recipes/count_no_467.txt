@@ -1,0 +1,444 @@
+Vectorizer	Truncation	Normalization
+Count	No	467
+
+brazilian:
+brazilian 1.0
+greek 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+british:
+british 1.0
+brazilian 0.0
+thai 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+filipino 0.0
+greek 0.0
+jamaican 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+cajun_creole:
+cajun_creole 1.0
+brazilian 0.0
+greek 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+chinese:
+chinese 1.0
+brazilian 0.0
+thai 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+filipino 0.0
+greek 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+filipino:
+filipino 1.0
+greek 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+thai 0.0
+brazilian 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+french:
+french 1.0
+brazilian 0.0
+greek 0.0
+mexican 0.0
+spanish 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+greek:
+greek 1.0
+brazilian 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+indian:
+indian 1.0
+brazilian 0.0
+greek 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+irish:
+irish 1.0
+brazilian 0.0
+greek 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+indian 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+italian:
+italian 1.0
+brazilian 0.0
+thai 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+filipino 0.0
+greek 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+vietnamese 0.0
+
+jamaican:
+jamaican 1.0
+brazilian 0.0
+thai 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+filipino 0.0
+greek 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+japanese:
+japanese 1.0
+brazilian 0.0
+thai 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+filipino 0.0
+greek 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+korean:
+korean 1.0
+brazilian 0.0
+greek 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+irish 0.0
+indian 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+mexican:
+mexican 1.0
+brazilian 0.0
+greek 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+moroccan:
+moroccan 1.0
+brazilian 0.0
+thai 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+filipino 0.0
+greek 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+italian 0.0
+vietnamese 0.0
+
+russian:
+russian 1.0
+brazilian 0.0
+thai 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+filipino 0.0
+greek 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+southern_us:
+brazilian nan
+greek nan
+mexican nan
+spanish nan
+french nan
+cajun_creole nan
+korean nan
+irish nan
+indian nan
+thai nan
+filipino nan
+jamaican nan
+british nan
+southern_us nan
+japanese nan
+russian nan
+chinese nan
+moroccan nan
+italian nan
+vietnamese nan
+
+spanish:
+spanish 1.0
+brazilian 0.0
+greek 0.0
+mexican 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+thai 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+thai:
+thai 1.0
+brazilian 0.0
+greek 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+filipino 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+vietnamese 0.0
+
+vietnamese:
+vietnamese 1.0
+thai 3.33937478469e-303
+greek 0.0
+mexican 0.0
+spanish 0.0
+french 0.0
+cajun_creole 0.0
+korean 0.0
+irish 0.0
+indian 0.0
+brazilian 0.0
+jamaican 0.0
+british 0.0
+southern_us 0.0
+japanese 0.0
+russian 0.0
+chinese 0.0
+moroccan 0.0
+italian 0.0
+filipino 0.0
+Matched:  6720
+Not Matched: 3224
